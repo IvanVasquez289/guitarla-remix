@@ -1,7 +1,9 @@
 import { 
     Meta,
     Links,
-    Outlet
+    Outlet,
+    Scripts,
+    LiveReload
 } from "@remix-run/react"
 import style from '~/styles/index.css'
 import Header from "~/components/header";
@@ -61,6 +63,12 @@ function Document ({children}){
             <body>
                 <Header/>
                 {children}
+
+
+                {/* Carga las optimizaciones para evitar los flashazos con los enlaces del navbar */}
+                {/* Live reload para que la pagina se recarge solita */}
+                <Scripts/> 
+                <LiveReload/>
             </body>
         </html>
     )
