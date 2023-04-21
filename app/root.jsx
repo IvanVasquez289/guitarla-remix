@@ -3,7 +3,8 @@ import {
     Links,
     Outlet
 } from "@remix-run/react"
-import style from './styles/index.css'
+import style from '~/styles/index.css'
+import Header from "~/components/header";
 
 export function meta() {
     return [
@@ -58,6 +59,7 @@ function Document ({children}){
                 <Links/>
             </head>
             <body>
+                <Header/>
                 {children}
             </body>
         </html>
