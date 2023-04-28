@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
         <div className="contenedor barra">
             <Link to={'/'}>
-                <img src={logo} alt="imagen logo" />
+                <img src={logo} alt="imagen logo" className="logo"/>
             </Link>
 
             <nav className="navegacion">
