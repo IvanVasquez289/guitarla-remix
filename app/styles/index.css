@@ -67,12 +67,12 @@
   
 }
 
-.navegacion {
+.header .navegacion {
   display: flex;
   gap: 3rem;
 }
 
-.navegacion a {
+.header .navegacion a {
   color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
@@ -83,8 +83,8 @@
   transition-duration: 300ms;
 }
 
-.navegacion a:hover,
-.active
+.header .navegacion a:hover,
+.header .active
 {
   background-color: var(--primary);
   

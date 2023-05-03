@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react"
 import style from '~/styles/index.css'
 import Header from "~/components/header";
+import Footer from "~/components/footer";
 
 export function meta() {
     return [
@@ -64,7 +65,7 @@ function Document ({children}){
                 <Header/>
                 {children}
 
-
+                <Footer/>
                 {/* Carga las optimizaciones para evitar los flashazos con los enlaces del navbar */}
                 {/* Live reload para que la pagina se recarge solita */}
                 <Scripts/> 
