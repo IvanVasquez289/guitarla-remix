@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="contenedor contenido">
             <Navegacion/>
 
-            <a className="copyright">Todos los derechos reservados {new Date().getFullYear()}</a>
+            <p className="copyright">Todos los derechos reservados {new Date().getFullYear()}</p>
         </div>
     </footer>
   )
