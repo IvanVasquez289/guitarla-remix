@@ -94,7 +94,7 @@ export function ErrorBoundary(){
     return(
         <Document>
             <p className="error"> {error.status} {error.statusText} </p>
-            <Link to='/' className="error-enlace">Tal vez quieras regresar a la pagina principal</Link>
+            <Link to='/' className="error-enlace">Tal vez quieras regresar a la pagina principal jeje</Link>
         </Document>
     )
 
