@@ -19,7 +19,6 @@ export async function loader({params}){
 }
 
 export function meta({data}){
-  // console.log(data.data[0].attributes.nombre)
   if(!data){
     return[
       {
