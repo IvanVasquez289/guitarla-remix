@@ -41,3 +41,8 @@
     overflow: hidden;
     font-size: 1.8rem;
 }
+
+.post .fecha {
+    font-size: 1.6rem;
+    color: var(--primary);
+}
