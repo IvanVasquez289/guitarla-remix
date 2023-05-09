@@ -1,6 +1,6 @@
 import { useLoaderData } from '@remix-run/react'
 import {getGuitarras } from '~/models/guitarras.server.js'
-import {getPots } from '~/models/posts.server.js'
+import {getPost } from '~/models/posts.server.js'
 import ListadoGuitarras from '../components/listado-guitarras'
 import ListadoPosts from "../components/listado-posts"
 import styleGuitarras from '~/styles/tienda.css'
@@ -27,7 +27,7 @@ export async function loader(){
 
   const [guitarras , posts] = await Promise.all([
     getGuitarras(),
-    getPots()
+    getPost()
   ])
 
   console.log(guitarras)
