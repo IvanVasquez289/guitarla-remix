@@ -70,6 +70,7 @@
 .header .navegacion {
   display: flex;
   gap: 3rem;
+  align-items: center;
 }
 
 .header .navegacion a {
@@ -83,6 +84,9 @@
   transition-duration: 300ms;
 }
 
+.header .navegacion img{
+  width: 3rem;
+}
 .header .navegacion a:hover,
 .header .active
 {
@@ -130,6 +134,10 @@
   text-decoration: none;
   font-weight: 900;
   font-size: 2.2rem; 
+}
+
+.footer .navegacion a:last-of-type {
+  display: none;
 }
 
 .footer .copyright {
