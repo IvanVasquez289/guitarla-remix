@@ -10,7 +10,13 @@ import stylesCurso from '~/styles/curso.css'
 import Curso from '../components/curso'
 
 export function meta(){
+  return[
+    {
+      title: 'GuitarLA - Tienda',
+      description: 'Nuestra coleccion de guitarras'
+    },{ name: "viewport", content: "width=device-width,initial-scale=1" }
 
+  ]
 }
 
 export function links(){
