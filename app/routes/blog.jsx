@@ -1,5 +1,5 @@
 import { useLoaderData } from "@remix-run/react"
-import { getPost } from "~/models/posts.server"
+import { getPosts } from "~/models/posts.server"
 import ListadoPosts from "../components/listado-posts"
 import styles from '~/styles/blog.css'
 
@@ -22,7 +22,7 @@ export function links(){
 }
 
 export async function loader(){
-  const posts = await getPost()
+  const posts = await getPosts()
   return posts.data
 }
 

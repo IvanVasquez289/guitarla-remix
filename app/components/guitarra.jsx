@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 
 const Guitarra = ({guitarra}) => {
   const {nombre, descripcion, imagen, url, precio} = guitarra
-    console.log(url)
+    // console.log(url)
 //   console.log(imagen.data.attributes.formats.medium.url)
   const imagenUrl = imagen.data.attributes.formats.medium.url;
 

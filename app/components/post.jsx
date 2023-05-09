@@ -4,8 +4,7 @@ import {formatearFecha} from '~/utils/helper.js'
 const Post = ({post}) => {
 
   const {contenido, imagen, titulo, url, publishedAt} = post;
-formatearFecha
-  console.log(post)
+  // console.log(post)
   return (
     <article className='post'>
         <img src={imagen.data.attributes.formats.small.url} alt={`imagen post ${titulo}`} />
