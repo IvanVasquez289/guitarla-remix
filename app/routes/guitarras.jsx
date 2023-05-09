@@ -1,4 +1,4 @@
-import { useLoaderData } from "@remix-run/react"
+import { useLoaderData, Outlet } from "@remix-run/react"
 import { getGuitarras } from "~/models/guitarras.server"
 import ListadoGuitarras from '../components/listado-guitarras'
 import style from '~/styles/tienda.css'
@@ -32,6 +32,7 @@ const Tienda = () => {
   return (
     <main className="contenedor">
       <ListadoGuitarras guitarras={guitarras}/>
+      <Outlet/>
     </main>
   )
 }
