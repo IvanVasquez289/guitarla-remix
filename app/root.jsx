@@ -52,8 +52,23 @@ export default function app(){
     const [carrito,setCarrito] = useState([])
     
     const agregarCarrito = guitarra => {
-        console.log('agregando...')
-        setCarrito([...carrito, guitarra])
+
+        const guitarraExiste = carrito.some(guitarraState => guitarraState.id === guitarra.id)
+
+        if(guitarraExiste){
+            console.log('Ya existe')
+            const guitarrasActualizado = carrito.map(guitarraState => {
+                if(guitarraState.id === guitarra.id){
+                    guitarraState.cantidad = guitarra.cantidad
+                }
+                return guitarraState
+            }) 
+            setCarrito(guitarrasActualizado)
+        }else{
+            // Nuevo registro
+            console.log('Nuevo registro')
+            setCarrito([...carrito, guitarra])
+        }
     }
 
     return (
