@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { 
     Meta,
     Links,
@@ -48,18 +49,18 @@ export function links(){
 
 
 export default function app(){
-
-    function sumar(){
-        console.log(2+2)
+    const [carrito,setCarrito] = useState([])
+    
+    const agregarCarrito = guitarra => {
+        console.log('agregando...')
+        setCarrito([...carrito, guitarra])
     }
 
     return (
         <Document>
             <Outlet
                 context={{
-                    guitarLA: 'guitarLA',
-                    auth: true,
-                    sumar
+                    agregarCarrito
                 }}
             />
         </Document>

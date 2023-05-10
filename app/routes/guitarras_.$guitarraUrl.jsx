@@ -47,9 +47,8 @@ export function links(){
 
 
 const Guitarra = () => {
-  const {auth,sumar} = useOutletContext()
-  console.log(auth)
-  sumar()
+  const {agregarCarrito} = useOutletContext()
+  
   const [cantidad, setCantidad] = useState(0)
   const guitarra = useLoaderData()
   const {nombre, imagen, descripcion, precio} = guitarra.data[0].attributes;
@@ -72,6 +71,7 @@ const Guitarra = () => {
     }
 
     console.log(guitarraSeleccionada)
+    agregarCarrito(guitarraSeleccionada)
   }
 
   return (
