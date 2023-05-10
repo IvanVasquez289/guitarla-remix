@@ -1,3 +1,4 @@
+import { useOutletContext } from '@remix-run/react'
 import imagen from '../../public/img/nosotros.jpg'
 import style from  '~/styles/nosotros.css'
 
@@ -24,6 +25,10 @@ export function links(){
   ]
 }
 const Nosotros = () => {
+  // solo es para mostrar como se obtiene la informacion
+  const data = useOutletContext()
+  console.log(data)
+  
   return (
     <main className="contenedor nosotros">
       <h2 className="heading">Nosotros</h2>

@@ -48,9 +48,20 @@ export function links(){
 
 
 export default function app(){
+
+    function sumar(){
+        console.log(2+2)
+    }
+
     return (
         <Document>
-            <Outlet/>
+            <Outlet
+                context={{
+                    guitarLA: 'guitarLA',
+                    auth: true,
+                    sumar
+                }}
+            />
         </Document>
     )
 }

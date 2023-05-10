@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useLoaderData } from "@remix-run/react"
+import { useLoaderData , useOutletContext} from "@remix-run/react"
 import { getGuitarra } from "~/models/guitarras.server"
 import styles from '~/styles/tienda.css'
 
@@ -47,11 +47,14 @@ export function links(){
 
 
 const Guitarra = () => {
+  const {auth,sumar} = useOutletContext()
+  console.log(auth)
+  sumar()
   const [cantidad, setCantidad] = useState(0)
   const guitarra = useLoaderData()
   const {nombre, imagen, descripcion, precio} = guitarra.data[0].attributes;
   // console.log(imagen.data.attributes.url)
-  
+
   const handleSubmit = (e)=>{
     e.preventDefault()
 
