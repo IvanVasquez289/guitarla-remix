@@ -58,3 +58,13 @@
     position: sticky;
     top: 3rem;
 }
+
+.select{
+    all: unset;
+    border: 1px  solid;
+    color: #cfcfcf;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
