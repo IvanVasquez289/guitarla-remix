@@ -41,9 +41,10 @@
     font-weight: 700;
     font-size: 4.2rem;
 }
-.precio {
+.producto .precio {
     font-weight: 700;
     color: var(--primary);
+    margin-top: 4rem;
 }
 
 .subtotal{
@@ -61,8 +62,7 @@
 
 .select{
     all: unset;
-    border: 1px  solid;
-    color: #cfcfcf;
+    border: 1px  solid #cfcfcf;
     text-align: center;
     width: 100%;
     padding: 0.5rem;

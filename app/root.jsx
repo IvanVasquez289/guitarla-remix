@@ -71,12 +71,25 @@ export default function app(){
         }
     }
 
+
+    const actualizarCantidad = guitarra => {
+        const guitarrasActualizado = carrito.map(guitarraState => {
+            if(guitarraState.id === guitarra.id){
+                guitarraState.cantidad = guitarra.cantidad
+            }
+            return guitarraState
+        })
+
+        setCarrito(guitarrasActualizado)
+    }
+
     return (
         <Document>
             <Outlet
                 context={{
                     agregarCarrito,
-                    carrito
+                    carrito,
+                    actualizarCantidad
                 }}
             />
         </Document>
