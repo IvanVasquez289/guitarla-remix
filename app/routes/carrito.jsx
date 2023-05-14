@@ -27,8 +27,8 @@ const Carrito = () => {
       <h1 className="heading">Carrito de compras</h1>
 
       <div className="contenido">
-        <div>
-          <h2 className='carrito'>Articulos</h2>
+        <div className='carrito'>
+          <h2>Articulos</h2>
 
           {carrito.length === 0 ? 'Carrito vacio' : (
             carrito.map(producto => (
@@ -39,6 +39,7 @@ const Carrito = () => {
 
                 <div>
                   <p className="nombre"> {producto.nombre} </p>
+                  <p>Cantidad: {producto.cantidad}</p>
                   <p className="precio">$ <span>{producto.precio}</span> </p>
                   <p className="subtotal">Subtotal: $ <span>{producto.cantidad * producto.precio}</span> </p>
                 </div>
