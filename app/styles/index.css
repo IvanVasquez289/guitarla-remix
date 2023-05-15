@@ -71,6 +71,13 @@
   display: flex;
   gap: 3rem;
   align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 470px) {
+  .header .navegacion{
+    flex-direction: row;
+  }
 }
 
 .header .navegacion a {
