@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { 
     Meta,
     Links,
@@ -49,7 +49,15 @@ export function links(){
 
 
 export default function app(){
-    const [carrito,setCarrito] = useState([])
+    const carritoLs = typeof window !== 'undefined' && JSON.parse(localStorage.getItem('carrito')) || []
+    const [carrito,setCarrito] = useState(carritoLs)
+
+    useEffect(() => {
+        if(typeof window !== 'undefines'){
+            localStorage.setItem('carrito',JSON.stringify(carrito))
+        }
+    }, [carrito])
+    
     
     const agregarCarrito = guitarra => {
 
