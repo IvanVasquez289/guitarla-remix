@@ -9,3 +9,9 @@ export async function getGuitarra(url){
     const resultado = await respuesta.json()
     return resultado;
 }
+
+export async function getGuitarrasIndex(){
+    const respuesta = await fetch(`${process.env.API_URL}/guitarras?populate=imagen&pagination[page]=1&pagination[pageSize]=6&sort=id:ASC`) 
+    const resultado = await respuesta.json()
+    return resultado;
+}

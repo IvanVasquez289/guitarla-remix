@@ -9,3 +9,9 @@ export async function getPost(url){
     const resultado = await respuesta.json()
     return resultado;
 }
+
+export async function getPostsIndex(){
+    const respuesta = await fetch(`${process.env.API_URL}/posts?populate=imagen&pagination[page]=1&pagination[pageSize]=3&`) 
+    const resultado = await respuesta.json()
+    return resultado;
+}

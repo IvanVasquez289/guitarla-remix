@@ -186,3 +186,32 @@
 .enlace:hover {
   background-color: var(--primary);
 }
+
+.info{
+  background-color: black;
+  text-align: center;
+  font-weight: 900;
+  color: var(--white);
+  width: 40%;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.info:hover{
+  background-color: var(--primary);
+
+}
+
+.nose{
+  align-items: center;
+}
+
+.nose a {
+  display: block;
+}

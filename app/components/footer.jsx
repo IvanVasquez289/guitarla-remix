@@ -5,8 +5,11 @@ const Footer = () => {
     <footer className="footer">
         <div className="contenedor contenido">
             <Navegacion/>
-
-            <p className="copyright">Todos los derechos reservados {new Date().getFullYear()} :) </p>
+            
+            <nav className=" nose">
+            <p className="copyright">Todos los derechos reservados {new Date().getFullYear()} :)</p>
+            <a className="copyright" href="https://github.com/IvanVasquez289">Ivan Vasquez</a>
+            </nav>
         </div>
     </footer>
   )

@@ -1,6 +1,6 @@
-import { useLoaderData } from '@remix-run/react'
-import {getGuitarras } from '~/models/guitarras.server.js'
-import {getPosts } from '~/models/posts.server.js'
+import { useLoaderData, Link } from '@remix-run/react'
+import {getGuitarrasIndex } from '~/models/guitarras.server.js'
+import {getPostsIndex } from '~/models/posts.server.js'
 import {getCurso } from '~/models/curso.server.js'
 import ListadoGuitarras from '../components/listado-guitarras'
 import ListadoPosts from "../components/listado-posts"
@@ -39,8 +39,8 @@ export function links(){
 export async function loader(){
 
   const [guitarras , posts, curso] = await Promise.all([
-    getGuitarras(),
-    getPosts(),
+    getGuitarrasIndex(),
+    getPostsIndex(),
     getCurso()
   ])
 
@@ -66,11 +66,19 @@ const Index = () => {
         <ListadoGuitarras guitarras={guitarras}/>
       </main>
 
+      <Link to={"/guitarras"} className='contenedor info'>
+        Ver todas las guitarras...
+      </Link>
+
       <Curso curso={curso.attributes}/>
 
       <section className='contenedor'>
         <ListadoPosts posts={posts}/>
       </section>
+
+      <Link to={"/blog"} className='contenedor info'>
+        Ver todos los posts...
+      </Link>
     </>
   )
 }
