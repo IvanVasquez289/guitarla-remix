@@ -215,3 +215,13 @@
 .nose a {
   display: block;
 }
+
+.mensaje{
+  background-color: var(--primary);
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 700;
+}

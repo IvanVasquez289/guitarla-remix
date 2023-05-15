@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useLoaderData , useOutletContext} from "@remix-run/react"
 import { getGuitarra } from "~/models/guitarras.server"
+import Mensaje from "../components/mensaje"
 import styles from '~/styles/tienda.css'
 
 export async function loader({params}){
@@ -50,13 +51,14 @@ const Guitarra = () => {
   const {agregarCarrito} = useOutletContext()
   
   const [cantidad, setCantidad] = useState(0)
+  const [mensaje, setMensaje] = useState(false)
   const guitarra = useLoaderData()
   const {nombre, imagen, descripcion, precio} = guitarra.data[0].attributes;
   // console.log(imagen.data.attributes.url)
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-
+    setMensaje(false)
     if(cantidad < 1) {
       alert('Debes seleccionar al menos una guitarra')
       return
@@ -72,6 +74,11 @@ const Guitarra = () => {
 
     console.log(guitarraSeleccionada)
     agregarCarrito(guitarraSeleccionada)
+    setMensaje(true)
+
+    setTimeout(() => {
+      setMensaje(false)
+    }, 3000);
   }
 
   return (
@@ -97,7 +104,7 @@ const Guitarra = () => {
           </select>
           <input type="submit" value="Agregar al carrito" />
         </form>
-
+        {mensaje && <Mensaje/>}
       </div>
 
      
